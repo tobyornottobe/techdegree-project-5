@@ -1,0 +1,18 @@
+
+
+.nav {
+  margin-top: em(20px);
+  margin-bottom: em(30px);
+  
+  @include e(item) {
+    @extend %nav-item-disp;
+    a {
+      @extend %nav-item-link;
+
+      &:hover {
+        @extend %nav-item-on;
+        color: $white;
+      }
+    }
+  }
+}

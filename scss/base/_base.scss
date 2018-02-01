@@ -1,0 +1,19 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+
+ul {
+    padding: 0px;
+}
+
+
+p {
+    font-size: em(18px);
+    line-height: (27px/18px);
+    color: palettes($grey);
+    font-weight: $font-weight--light;
+
+}
