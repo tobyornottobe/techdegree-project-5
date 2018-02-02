@@ -6,7 +6,6 @@
   }
 }
 
-
 .grid__col {
   @include mq(med){
     @include g-columns;
@@ -17,8 +16,11 @@
   @extend %clearfix;
   margin-top: 2em;
 	margin-bottom: 2em;
-  display: block;
+  @include flex(block, null, null, null)
+}
 
+.grid__col--3 {
+  @include flex(flex, null, null, center)
 }
 
 [class^="grid__col--"] {
@@ -60,37 +62,19 @@ $grid-colors: (
 	}
 }
 
-//logo
-.grid__col--3 {
-  align-self: center;
-}
-//navigation
-.grid__col--9 {
-  margin-top: 1em;
-  flex-direction: column;
-}
-
 @include mq(med) {
   .grid__row {
-    display: flex;
-    justify-content: space-between;
+    @include flex(flex, null, null, space-between)
   }
   .grid__col--3 {
     margin-right: auto;
+    align-self: center;
   }
   .grid__col--9 {
+    margin-top: 1em;
     width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
   }
-}
-
-.grid__col--12 {
-
-  @include mq(med) {
-    display: flex;
-    justify-content: space-between;
+  .grid__col--12 {
+    @include flex(flex, null, null, space-between)
   }
-
 }

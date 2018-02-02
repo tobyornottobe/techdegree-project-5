@@ -1,9 +1,10 @@
 
 
 .nav {
+
   margin-top: em(20px);
   margin-bottom: em(30px);
-  
+
   @include e(item) {
     @extend %nav-item-disp;
     a {
@@ -14,5 +15,8 @@
         color: $white;
       }
     }
+  }
+  @include mq(med) {
+    display: flex;
   }
 }

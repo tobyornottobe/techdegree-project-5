@@ -12,12 +12,19 @@
     }
   }
   @else {
-    @error "Hmmm! No value could be retrieved for '#{$break}'."
+    @error "Hmmm! No value could be retrieved for '#{$break}'.";
   }
 }
 
 
 //Flexbox settings
+
+@mixin flex($flex, $direction, $wrap, $justify) {
+  display: $flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
 
 @mixin g-columns {
   @for $i from 1 through $g-col-count {
@@ -29,6 +36,8 @@
     }
   }
 }
+
+
 
 @mixin doubly($margin: 1em) {
 	& + & {
